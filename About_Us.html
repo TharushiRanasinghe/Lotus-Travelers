@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" >
+    <title>About Us</title>
+    <link rel="stylesheet" type="text/css" href="meetOurTeam.css">
+    <link rel="stylesheet" href="About_Us.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    >
+  </head>
+  <body>
+    <div class="navbar">
+      <img class="logo" src="image/Logo2.png" alt="Logo2">
+      <a href="main.html">Home</a>
+      <a href="comment.html">Comments</a>
+      <a href="shop.html">Shop</a>
+      <a href="Quiz.html">Quiz</a>
+      <a href="sitemap.html">Site Map</a>
+      <a href="About_Us.html" class="active">About us</a>
+    </div>
+    <div class="parent">
+      <div class="container1">
+        <div class="about">
+          <div class="inner-section">
+            <h1>About Us</h1>
+            <p class="text">
+              Travel opens your heart with spirit... Broadens your intellect...
+              Satisfies your life with feelings to express... It makes a
+              difference you find the excellence of the world and assists you to
+              encounter all the superb endowments of Mother Nature, Welcome to
+              Lotus Tours...! Contact us for an exceedingly curated travel
+              guide. Discover Sri Lanka with us and find the finest time and
+              best places to make your life memorable.
+            </p>
+            <div class="skills">
+              <button onclick="showProfiles()">Meet our Team</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="container2" id="profiles-container" style="display: none">
+        <h1 class="heading"><span>meet</span>Our Team</h1>
+
+        <div class="profiles">
+          <div class="profile">
+            <img src="image/s1_profile.jpg" class="profile-img" alt="picofsunera">
+            <div class="profile-info">
+              <h3 class="user-name">
+                <a href="s1_page-editor.html">Sunera Manimendra</a>
+              </h3>
+              <h5>Role:Student 1</h5>
+              <p>UoW ID : w1956408</p>
+              <p style="margin-top: 5px">IIT ID : 20221456</p>
+              <p style="margin-top: 5px">sunera.20221456@iit.ac.lk</p>
+            </div>
+          </div>
+
+          <div class="profile">
+            <img src="image/s2_profile.jpg" class="profile-img" alt="picoftharushi">
+            <div class="profile-info">
+              <h3 class="user-name">
+                <a href="pageEditor-Tharushi.html">Tharushi Ranasinghe</a>
+              </h3>
+              <h5>Role:Student 2</h5>
+              <p>UoW ID : w1956425</p>
+              <p style="margin-top: 5px">IIT ID : 20221508</p>
+              <p style="margin-top: 5px">tharushi.20221508@iit.ac.lk</p>
+            </div>
+          </div>
+
+          <div class="profile">
+            <img src="image/s3_profile.jpg" class="profile-img" alt="picofachini">
+            <div class="profile-info">
+              <h3 class="user-name">
+                <a href="s3_page-editor.html">Achini Pathirana</a>
+              </h3>
+              <h5>Role:Student 3</h5>
+              <p>UoW ID : w1956420</p>
+              <p style="margin-top: 5px">IIT ID : 20221502</p>
+              <p style="margin-top: 5px">achini.20221502@iit.ac.lk</p>
+            </div>
+          </div>
+
+          <div class="profile">
+            <img src="image/s4_profile.jpg" class="profile-img" alt="picofsunera4">
+            <div class="profile-info">
+              <h3 class="user-name">
+                <a href="s4_page-editor.html">Sunera Samarasinghe</a>
+              </h3>
+              <h5>Role:Student 4</h5>
+              <p>UoW ID : w1870622</p>
+              <p style="margin-top: 5px">IIT ID : 20200883</p>
+              <p style="margin-top: 5px">sunera.20200883@iit.ac.lk</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="container3">
+        <div class="contact">
+          <h2>Contact Us</h2>
+          <ul>
+            <li><i class="fas fa-phone-alt"></i> 0745621999 / 0703300333</li>
+            <li>
+              <i class="fas fa-map-marker-alt"></i> 1/23,Main Street,Kandy
+            </li>
+            <li>
+              <i class="fas fa-envelope"></i
+              ><a href="mailto:lotustours@gmail.com">
+                lotustours@gmail.com</a
+              >
+            </li>
+          </ul>
+        </div>
+
+        <div class="image">
+          <video  height="400" autoplay loop muted style="width: 100%;">
+            <source src="image/train.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+      </div>
+      <div class="container4">
+        <div class="way_to_my_page_editor">
+          <a href="s3_page-editor.html">Achini Pathirana</a>
+        </div>
+      </div>
+      <div class="back-to-Top">
+        <a href="#top">
+          <img
+            src="https://cdn-icons-png.flaticon.com/512/3272/3272712.png"
+            alt="Back to Top"
+          >
+          Back To The Top
+        </a>
+      </div>
+    </div>
+
+    <script>
+      function showProfiles() {
+        var profilesContainer = document.getElementById("profiles-container");
+        if (profilesContainer.style.display === "none") {
+          profilesContainer.style.display = "block";
+        } else {
+          profilesContainer.style.display = "none";
+        }
+        profilesContainer.scrollIntoView({ behavior: "smooth" });
+      }
+    </script>
+  </body>
+</html>

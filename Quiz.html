@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Check your Knowledge</title>
+    <link rel="stylesheet" href="Quiz.css">
+    <!-- FontAweome CDN Link for Icons-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    >
+  </head>
+  <body>
+    <div class="navbar">
+      <img class="logo" src="image/Logo2.png" alt="Logo2">
+      <a href="main.html">Home</a>
+      <a href="comment.html">Comments</a>
+      <a href="shop.html">Shop</a>
+      <a href="Quiz.html" class="active">Quiz</a>
+      <a href="sitemap.html">Site Map</a>
+      <a href="About_Us.html">About us</a>
+    </div>
+    <!-- Start the Quiz button -->
+    <div class="start_Quz_btn"><button>Start Quiz</button></div>
+
+    <!-- The Information Box -->
+    <div class="info_abt_Quz_box">
+      <div class="info-title"><span>Rules of the Quiz</span></div>
+      <div class="info-list">
+        <div class="rule_info">
+          1. You will have only <span>06 seconds</span> per each question.
+        </div>
+        <div class="rule_info">
+          2. Once you select your answer, it can't be changed.
+        </div>
+        <div class="rule_info">
+          3. After 60 seconds quiz will be auto submited.
+        </div>
+        <div class="rule_info">
+          4. You can't exit from the Quiz while you're playing.
+        </div>
+        <div class="rule_info">
+          5. You'll get points on the basis of your performence.
+        </div>
+      </div>
+      <div class="buttons">
+        <button class="quit_Quz">Exit Quiz</button>
+        <button class="reStart_Quz">Continue</button>
+      </div>
+    </div>
+
+    <!--The Quiz Box -->
+    <div class="quiz_box_boder">
+      <header>
+        <div class="title">Check your Knowledge</div>
+        <div class="timer">
+          <div class="tiMe_left_txt">Time Left</div>
+          <div class="tiMer_sec">06</div>
+        </div>
+        <div class="tiMe_line"></div>
+      </header>
+      <section>
+        <div class="que_txt">
+          <!-- added question from JavaScript -->
+        </div>
+        <div class="alternative_List">
+          <!-- added inserted alternatives from JavaScript -->
+        </div>
+      </section>
+
+      <!-- footer of Quz Box -->
+      <footer>
+        <div class="total_que">
+          <!-- added Question Count Number from JavaScript -->
+        </div>
+        <button class="next_btn">Next Question</button>
+      </footer>
+    </div>
+
+    <!-- Results Box -->
+    <div class="upShot_box">
+      <div class="icon">
+        <i class="fas fa-trophy"></i>
+      </div>
+      <div class="complete_Text">You've completed the Quiz!</div>
+      <div class="score_Txt">
+        <!-- added Score Result from JavaScript -->
+      </div>
+      <div class="buttons">
+        <button class="reStart_Quz">Replay Quiz</button>
+        <button class="quit_Quz">Quit Quiz</button>
+      </div>
+    </div>
+
+    <!-- JavaScript file including questions_Quering and alternatibe only -->
+    <script src="QuizQuestions.js"></script>
+
+    <!--  JavaScript file I've coded every Quiz Codes -->
+    <script src="QuizScript.js"></script>
+    <div class="way_to_my_page_editor">
+      <a href="s3_page-editor.html">Achini Pathirana</a>
+    </div>
+    <video autoplay loop muted id="bg-video">
+      <source src="image/wf.mp4" type="video/mp4">
+    </video>
+  </body>
+</html>

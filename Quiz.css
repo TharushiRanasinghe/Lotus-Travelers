@@ -1,0 +1,447 @@
+/* importing google fonts */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #eaf2f8;
+}
+
+::selection {
+  color: #fff;
+  background: #007bff;
+}
+
+.start_Quz_btn,
+.info_abt_Quz_box,
+.quiz_box_boder,
+.upShot_box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.info_abt_Quz_box.activeInfo,
+.quiz_box_boder.activeQuiz,
+.upShot_box.activeResult {
+  opacity: 1;
+  z-index: 5;
+  pointer-events: auto;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.start_Quz_btn button {
+  font-size: 50px;
+  font-weight: 500;
+  color: #fff;
+  padding: 15px 30px;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  background: #009dff;
+  cursor: pointer;
+}
+
+.info_abt_Quz_box {
+  width: 540px;
+  background: #fff;
+  border-radius: 5px;
+  transform: translate(-50%, -50%) scale(0.9);
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s ease;
+}
+
+.info_abt_Quz_box .info-title {
+  height: 60px;
+  width: 100%;
+  border-bottom: 1px solid lightgrey;
+  display: flex;
+  align-items: center;
+  padding: 0 30px;
+  border-radius: 5px 5px 0 0;
+  font-size: 40px;
+  font-weight: 600;
+}
+
+.info_abt_Quz_box .info-list {
+  padding: 15px 30px;
+}
+
+.info_abt_Quz_box .info-list .rule_info {
+  margin: 5px 0;
+  font-size: 22px;
+}
+
+.info_abt_Quz_box .info-list .rule_info span {
+  font-weight: 600;
+  color: #007bff;
+}
+.info_abt_Quz_box .buttons {
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 0 30px;
+  border-top: 1px solid lightgrey;
+}
+
+.info_abt_Quz_box .buttons button {
+  margin: 0 5px;
+  height: 40px;
+  width: 100px;
+  font-size: 20px;
+  font-weight: 500;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  border: 1px solid #007bff;
+  transition: all 0.3s ease;
+}
+
+.quiz_box_boder {
+  width: 550px;
+  background: #fff;
+  border-radius: 5px;
+  transform: translate(-50%, -50%) scale(0.9);
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s ease;
+}
+
+.quiz_box_boder header {
+  position: relative;
+  z-index: 2;
+  height: 70px;
+  padding: 0 30px;
+  background: #fff;
+  border-radius: 5px 5px 0 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0px 3px 5px 1px rgba(0, 0, 0, 0.1);
+}
+
+.quiz_box_boder header .title {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.quiz_box_boder header .timer {
+  color: #004085;
+  background: #cce5ff;
+  border: 1px solid #b8daff;
+  height: 45px;
+  padding: 0 8px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 145px;
+}
+
+.quiz_box_boder header .timer .tiMe_left_txt {
+  font-weight: 400;
+  font-size: 17px;
+  user-select: none;
+}
+.upShot_box .score_Txt span.green {
+  color: green;
+}
+.upShot_box .score_Txt span.orange {
+  color: orange;
+}
+.upShot_box .score_Txt span.red {
+  color: red;
+}
+
+.quiz_box_boder header .timer .tiMer_sec {
+  font-size: 18px;
+  font-weight: 500;
+  height: 30px;
+  width: 45px;
+  color: #fff;
+  border-radius: 5px;
+  line-height: 30px;
+  text-align: center;
+  background: #343a40;
+  border: 1px solid #343a40;
+  user-select: none;
+}
+
+.quiz_box_boder header .tiMe_line {
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  height: 3px;
+  background: #007bff;
+}
+
+section {
+  padding: 25px 30px 20px 30px;
+  background: #fff;
+}
+
+section .que_txt {
+  font-size: 30px;
+  font-weight: 600;
+}
+
+section .alternative_List {
+  padding: 20px 0px;
+  display: block;
+}
+
+section .alternative_List .option {
+  background: aliceblue;
+  border: 1px solid #84c5fe;
+  border-radius: 5px;
+  padding: 8px 15px;
+  font-size: 23px;
+  font-weight: 400;
+  margin-bottom: 15px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+section .alternative_List .option:last-child {
+  margin-bottom: 0px;
+}
+
+section .alternative_List .option:hover {
+  color: #004085;
+  background: #cce5ff;
+  border: 1px solid #b8daff;
+}
+
+section .alternative_List .option.accurate {
+  color: #00664d;
+  background:  #b3ffec;
+  border: 1px solid 	 #99ffe6;
+}
+
+section .alternative_List .option.inaccurate {
+  color:  #b30047;
+  background:  #ffe6f0;
+  border: 1px solid #ff99c2;
+}
+
+section .alternative_List .option.disabled {
+  pointer-events: none;
+}
+
+section .alternative_List .option .icon {
+  height: 26px;
+  width: 26px;
+  border: 2px solid transparent;
+  border-radius: 50%;
+  text-align: center;
+  font-size: 20px;
+  pointer-events: none;
+  transition: all 0.3s ease;
+  line-height: 24px;
+}
+.alternative_List .option .icon.tick {
+  color: #23903c;
+  border-color: #23903c;
+  background: #d4edda;
+}
+
+.alternative_List .option .icon.cross {
+  color: #a42834;
+  background: #f8d7da;
+  border-color: #a42834;
+}
+
+footer {
+  height: 60px;
+  padding: 0 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1px solid lightgrey;
+}
+
+footer .total_que span {
+  display: flex;
+  user-select: none;
+}
+
+footer .total_que span p {
+  font-weight: 500;
+  padding: 0 5px;
+}
+
+footer .total_que span p:first-child {
+  padding-left: 0px;
+}
+
+footer button {
+  height: 40px;
+  padding: 0 13px;
+  font-size: 18px;
+  font-weight: 400;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  color: #fff;
+  border-radius: 5px;
+  background: #007bff;
+  border: 1px solid #007bff;
+  line-height: 10px;
+  opacity: 0;
+  pointer-events: none;
+  transform: scale(0.95);
+  transition: all 0.3s ease;
+}
+
+footer button:hover {
+  background: #0263ca;
+}
+
+footer button.show {
+  opacity: 1;
+  pointer-events: auto;
+  transform: scale(1);
+}
+
+.upShot_box {
+  background: #fff;
+  border-radius: 5px;
+  display: flex;
+  padding: 25px 30px;
+  width: 450px;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  transform: translate(-50%, -50%) scale(0.9);
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s ease;
+}
+
+.upShot_box .icon {
+  font-size: 100px;
+  color: #007bff;
+  margin-bottom: 10px;
+}
+
+.upShot_box .complete_Text {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.upShot_box .score_Txt span {
+  display: flex;
+  margin: 10px 0;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.upShot_box .score_Txt span p {
+  padding: 0 4px;
+  font-weight: 600;
+}
+
+.upShot_box .buttons {
+  display: flex;
+  margin: 20px 0;
+}
+
+.upShot_box .buttons button {
+  margin: 0 10px;
+  height: 45px;
+  padding: 0 20px;
+  font-size: 18px;
+  font-weight: 500;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  border: 1px solid #007bff;
+  transition: all 0.3s ease;
+}
+
+.buttons button.reStart_Quz {
+  color: #fff;
+  background: #007bff;
+}
+
+.buttons button.restart:hover {
+  background: #0263ca;
+}
+
+.buttons button.quit_Quz {
+  color: #007bff;
+  background: #fff;
+}
+
+.buttons button.quit_Quz:hover {
+  color: #fff;
+  background: #007bff;
+}
+.way_to_my_page_editor a {
+  position: absolute;
+  bottom:0;
+  right: 0;
+  margin-bottom: 10px;
+  font-size: 20px;
+  margin:10px;
+  background-color: white;
+}
+#bg-video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.navbar {
+  background-color: lightslategray;
+  overflow: hidden;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 60px;
+  position: fixed;
+  width: 100%;
+  top: 0;
+}
+.navbar a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  border-bottom: 2px solid transparent;
+  transition: border-bottom 0.3s ease-in-out;
+  font-size: 19px;
+}
+/*change the color of the link on hover*/
+.navbar a:hover {
+  background-color: #5dade2;
+  color: #000;
+}
+/* Add a background color to the active/current link */
+.navbar a.active {
+  background-color: #2874a6;
+  color: #fff;
+}
+.logo{
+	width:200px;
+	height: 60px;
+	padding-left: 10px;	
+}

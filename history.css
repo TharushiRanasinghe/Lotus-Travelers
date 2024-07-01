@@ -1,0 +1,176 @@
+*{
+    font-family: "Times New Roman";
+    margin: 0;
+    padding: 0;
+}
+.navbar{
+    background-color: lightslategray;
+	overflow: hidden;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	height: 60px;
+	position: fixed;
+	width: 100%;
+	top: 0;
+
+}
+.navbar a {
+    float: left;
+	display: block;
+	color: #f2f2f2;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+	border-bottom: 2px solid transparent;
+	transition: border-bottom 0.3s ease-in-out;
+	font-size: 19px;
+}
+/*change the color of the link on hover*/
+.navbar a:hover{
+	background-color: #5DADE2;
+	color:#000;
+}
+/* Add a background color to the active/current link */
+.navbar a.active {
+	background-color: #2874A6;
+	color: #fff;
+}
+body{
+    background-color: #EAF2F8 ;
+}
+.logo{
+	width:200px;
+	height: 60px;
+	padding-left: 10px;	
+}
+h1{
+  text-align: center;
+  font-size:75px ; 
+  color: #2874A6;
+  margin-top: 75px;
+}
+.img-gallery{
+    width: 80%;
+    margin: 100px auto 50px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap:30px;
+}
+.img-gallery img{
+    width:100%;
+    cursor:pointer;
+}
+.img-gallery img:hover{
+    transform: scale(0.8) rotate(-15deg);
+    border-radius: 20px;
+    box-shadow: 0 32px 75px rgba(68,77,136,0.2);
+}
+.full-img{
+    width:100%;
+    height:100%;
+    background: rgba(0,0,0,0.9);
+    position:fixed;
+    top:0;
+    left: 0;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
+} 
+.full-img img{
+    width:90%;
+    max-width: 500px;
+}
+.full-img span{
+    position:absolute;
+    top:5%;
+    right:5%;
+    font-size: 30px;
+    color: #fff;
+    cursor: pointer;
+}      
+.p-1{
+    font-style: italic;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: justify;
+    text-justify: inter-word;
+    line-height: 1.5;
+}
+.img-flag{
+    width: 350px;
+    height: 200px;
+    float: left;
+    margin-right: 10px;
+}
+.p-2{
+    text-align: justify;
+    text-justify: inter-word;
+    line-height: 1.5;
+    font-size: 17px;
+}
+.img-britishWar{
+    width:400px;
+    height: 250px;
+    float:right;
+    margin-left: 10px;
+}
+.names{
+    background-color: rgb(201, 223, 253);
+	padding: 10px;
+	width: 45%;
+	height: auto;
+	border: 1px solid black;
+    text-align: center;
+    font-size: 17px;
+    margin-left: 80px;
+    float:left;
+    line-height: 2.0;
+}
+ul{
+    list-style-type: none;
+}
+.tab{
+    margin-right: 80px;
+    float: right;
+}
+table, th, td{
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+th,td{
+    width: 40%;
+    height: 25px;
+    text-align: center;
+}
+.a{
+    background-color: #6495ED;
+}
+.b{
+    background-color: rgb(201, 223, 253);
+}
+.clear {
+    clear: both;
+}
+.back-to-top a{
+    color:#000;
+    font-size: 17px;
+}
+.img-back-to-top{
+    width: 35px;
+    height: 35px;
+}
+.p-editor{
+	background-color:#AEB6BF ;
+	border:1px solid black;
+	padding: 5px;
+	width: auto;
+	height: 40px;
+	font-size: 17px;
+	text-align: center;    
+}
+.p-editor a{
+	color:#000;
+}
+

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Feedback-Form</title>
+    <link rel="stylesheet" href="comment.css">
+    <script src="https://kit.fontawesome.com/c4254e24a8.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <div class="navbar">
+          <img class="logo" src="image/Logo2.png" alt="logo">
+            <a href="main.html">Home</a>
+            <a href="comment.html" class="active">Comments</a>
+            <a href="shop.html">Shop</a>
+            <a href="quiz.html">Quiz</a>
+            <a href="sitemap.html">Site Map</a>
+            <a href="about-Us.html">About us</a>
+        </div>
+    </header><br>
+    
+     <h1 id="welcome-to-kandy">Give your Comment</h1><br><br>
+
+  <div class="container">
+    <form action="mailto:tharushi.20221508@iit.ac.lk" method="post" enctype="text/plain">
+
+      <div class="input-group">
+        <label>Full Name</label>
+        <input type="text" placeholder="Enter your name" id="contact-name" onkeyup="validateName()">
+        <span id="name-error"></span>
+      </div>
+
+      <div class="input-group">
+        <label>Email Id</label>
+        <input type="email" placeholder="Enter Email" id="contact-email" onkeyup="validateEmail()">
+        <span id="email-error"></span>
+      </div><br>  
+
+      <fieldset>  
+        <p>How satisfied were you with our website today? Choose from 0 to 5,
+          where 0 is extremely dissatisfied and 5 is extremely satisfied:</p>
+          <div id="contact-rating" >
+            <input type="radio" name="rating" id="0Delivery" value="0" onclick="validateRating()">
+            <label for="0Delivery">0</label>
+            <input type="radio" name="rating" id="1Delivery" value="1" onclick="validateRating()">
+            <label for="1Delivery">1</label>
+            <input type="radio" name="rating" id="2Delivery" value="2" onclick="validateRating()">
+            <label for="2Delivery">2</label>
+            <input type="radio" name="rating" id="3Delivery" value="3" onclick="validateRating()">
+            <label for="3Delivery">3</label>
+            <input type="radio" name="rating" id="4Delivery" value="4" onclick="validateRating()">
+            <label for="4Delivery">4</label>
+            <input type="radio" name="rating" id="5Delivery" value="5" onclick="validateRating()">
+            <label for="5Delivery">5</label>
+        </div>
+        <span id="rating-number-error" ></span>   
+      </fieldset><br><br>  
+      
+      <fieldset>    
+        <p>Please could you tell us your reasons for giving the rating?<br>   
+        <textarea cols="15" rows="3" placeholder="Enter your Option here..." name="reasons" id="contact-rate" onkeyup="validateRate()"></textarea>
+        <span id="rate-error"></span>
+        </p>
+    </fieldset><br><br>
+
+      <fieldset>    
+        <p>How did you hear about us?<br>
+            <label for="referral"></label>
+            <select id="referral" name="referral" onchange="validateReferral()">
+                <option value="">--Please Select--</option>
+                <option value="website">Website</option>
+                <option value="Social media">Social media</option>
+                <option value="friends or any others">Friends or any others</option>
+            </select>
+        </p>
+        <span id="referral-error"></span>
+    </fieldset><br><br>
+
+      <fieldset>
+        <div id="contact-delivery" >
+        <p>Would you refer or recommend us to your friends, colleagues, or others?</p>
+        <input type="radio" name="delivery" id="yesDelivery" value="Yes" onclick="validateDelivery()" >
+        <label for="yesDelivery">Yes</label>
+        <input type="radio" name="delivery" id="noDelivery" value="No" onclick="validateDelivery()" >
+        <label for="noDelivery">No</label>
+        </div>
+        <span id="delivery-error"></span>
+      </fieldset><br><br>
+
+      <fieldset>    
+        <p>How can we improve to serve you better?<br>   
+        <textarea cols="15" rows="3" placeholder="Enter your Option here..." name="improve" id="contact-improve" onkeyup="validateImprove()"></textarea>
+        <span id="improve-error"></span>
+        </p>
+      </fieldset><br>
+    
+    <button onclick="return validateForm(); { myButton(); }" type="submit">Submit</button>
+    <span id="submit-error"></span>
+   
+    <button type="reset">Reset</button>
+  </form>
+
+  </div>
+
+  <div class="back-to-top">
+    <a href="#welcome-to-kandy">
+        <img class="img-back-to-top" src="image/back-to-the-top.png" alt="Back to the top icon">
+        Back to the top
+    </a>
+</div>
+<hr>
+
+<div class="p-editor">
+    <a href="pageEditor-Tharushi.html">Tharushi Ranasinghe</a>
+</div><br>
+
+<script src="comment.js"></script>  
+</body>
+</html>

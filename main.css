@@ -1,0 +1,151 @@
+*{
+	font-family: "Times New Roman";
+	margin: 0;
+	padding: 0;
+}
+.navbar{
+    background-color: lightslategray;
+	overflow: hidden;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	height: 60px;
+	position: fixed;
+	width: 100%;
+	top: 0;
+
+}
+.navbar a {
+    float: left;
+	display: block;
+	color: #f2f2f2;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+	border-bottom: 2px solid transparent;
+	transition: border-bottom 0.3s ease-in-out;
+	font-size: 19px;
+}
+/*change the color of the link on hover*/
+.navbar a:hover{
+	background-color: #5DADE2;
+	color:#000;
+}
+/* Add a background color to the active/current link */
+.navbar a.active {
+	background-color: #2874A6;
+	color: #fff;
+}
+body{
+	background-color: #EAF2F8;	
+}
+.b{
+    width:300px;
+    height: 200px;	
+}
+.logo{
+	width:200px;
+	height: 60px;
+	padding-left: 10px;	
+}
+h1{
+	text-align: center;
+	color: #2874A6;
+	font-size : 75px;
+	margin-top: 150px;
+	text-decoration: underline overline;
+}
+.container{
+	display: flex;
+	width:90%;
+	min-height: 700px;
+	justify-content: center;
+	align-items: center;
+	margin: 0 auto;
+	gap: 20px;
+}
+.card-bg{
+	width: 300px;
+	height: 500px;
+	border-radius: 15px;
+	background-position: center;
+	background-size: cover;
+}
+.content{
+	left: 0;
+	padding: 25px;
+}
+.card-heading{
+	font-size: 1.8rem;
+	text-shadow: 2px 2px 20px rgba(0, 0, 0, 0.2);
+	color: white;
+	text-transform: uppercase;
+}
+.card:hover{
+	transform: scale(1.1);
+	cursor: pointer;
+	transition: all 0.2s ease-in-out;
+}
+.container:hover >.card:not(:hover) .card-bg{
+	filter: brightness(0.5) blur(5px);
+}
+h2{
+	text-align: center;
+	color: #2E86C1;
+	font-size: 50px;
+}
+h3{
+	color: black;
+	font-size: 30px;
+	text-align: center;
+}
+.p-1{
+	font-size: 17px;
+	margin-left: 20%;
+	margin-right: 20%;
+	text-align: justify;
+	text-justify: inter-word;
+	line-height: 1.5;
+}
+.links-1 h4{
+	font-size: 18px;
+}
+.links-1{
+	background-color: #AEB6BF;
+	padding: 20px;
+	width: auto;
+	height: auto;
+	border: 1px solid black;
+	font-size: 17px;
+}
+.links-1 a{
+	color:#000
+}
+.p-2{
+	font-size: 17px;
+	text-align: center;
+	line-height: 1.5;
+}
+ul{
+	list-style-type: none;
+}
+.back-to-top a{
+    color:#000;
+	font-size: 17px;
+}
+.img-back-to-top{
+	width:35px;
+    height: 35px;
+}
+.p-editor{
+	background-color:#AEB6BF ;
+	border:1px solid black;
+	width: auto;
+	height: 40px;
+	font-size: 17px;
+	text-align: center;	
+	padding: 5px;
+}
+.p-editor a{
+	color:#000;
+}

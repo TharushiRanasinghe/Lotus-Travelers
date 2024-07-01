@@ -1,0 +1,79 @@
+/*font family for the whole website*/
+*{
+	font-family: "Times New Roman";
+	margin: 0;
+	padding: 0;
+}
+.navbar{
+    background-color: lightslategray;
+	overflow: hidden;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	height: 60px;
+	position: fixed;
+	width: 100%;
+	top: 0;
+
+}
+.navbar a {
+    float: left;
+	display: block;
+	color: #f2f2f2;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+	border-bottom: 2px solid transparent;
+	transition: border-bottom 0.3s ease-in-out;
+	font-size: 19px;
+}
+/*change the color of the link on hover*/
+.navbar a:hover{
+	background-color: #5DADE2;
+	color:#000;
+}
+/* Add a background color to the active/current link */
+.navbar a.active {
+	background-color: #2874A6;
+	color: #fff;
+}
+/*background color for whole website*/
+body{
+	background-color: #EAF2F8;	
+}
+.logo{
+	width:200px;
+	height: 60px;
+	padding-left: 10px;	
+}
+/* main heading*/
+h1{
+    color: #2874A6;
+	font-size : 75px;
+    text-align: center;
+	margin-top: 75px;
+}    
+h2{
+    color: #2E86C1;
+	font-size: 50px;
+    text-align: center;
+}
+p{
+    color:#000;
+    font-size: 17px;
+    line-height: 1.5;
+    text-align: justify;
+    text-justify: inter-word;
+}
+.p-editor{
+	background-color:#AEB6BF ;
+	border:1px solid black;
+	padding: 5px;
+	width: auto;
+	height: 40px;
+	font-size: 17px;
+	text-align: center;	
+}
+.p-editor a{
+	color:#000;
+}
